@@ -12,5 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Build compiler
+      run: make
     - name: Run tests
-      run: crystal spec
+      run: make std_spec compiler_spec
